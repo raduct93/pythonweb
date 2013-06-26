@@ -1,0 +1,15 @@
+<h1>TODO list App - {{aplicatie}}</h1>
+
+<ul>
+    {% for t in tasks %}
+    <li>
+        {{ t.text }} [Done: {{ t.done }}]
+        <a href="{{ url_for('setdone', id=t.id) }}">Set done</a>
+        <a href="{{ url_for('delete', id=t.id) }}">Delete</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="{{ url_for('deletedone') }}">Delete done tasks</a>
+<a href="{{ url_for('add') }} ">Add new task</a>
+

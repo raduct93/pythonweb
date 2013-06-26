@@ -1,0 +1,8 @@
+{# templates/add.html #}
+<form method = "POST" action="">
+    <input name="taskname" placeholder="Enter task details"
+        type="text" size="80"/>
+    <button type="submit">Add new task</button>
+</form>
+
+<a href="{{ url_for('homepage') }}">Go back home</a>
